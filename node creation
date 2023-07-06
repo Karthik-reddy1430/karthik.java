@@ -1,0 +1,41 @@
+class DecisionTreeNode {
+    private String attribute;
+    private String label;
+    private Map<String, DecisionTreeNode> children;
+
+    public DecisionTreeNode(String attribute, String label) {
+        this.attribute = attribute;
+        this.label = label;
+        this.children = new HashMap<>();
+    }
+
+    public void addChild(String value, DecisionTreeNode child) {
+        children.put(value, child);
+    }
+
+    // Getters and setters for attribute, label, and children
+
+    public String getAttribute() {
+        return attribute;
+    }
+
+    public void setAttribute(String attribute) {
+        this.attribute = attribute;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public Map<String, DecisionTreeNode> getChildren() {
+        return children;
+    }
+
+    public void setChildren(Map<String, DecisionTreeNode> children) {
+        this.children = children;
+    }
+}
